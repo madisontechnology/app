@@ -112,7 +112,7 @@
             </plugin>
             <!--    Run code coverage-->
 
-<!--            Tell travis to run integration test and unit test seperatly-->
+<!--   Tell travis to run integration test and unit test seperatly-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -132,7 +132,15 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--            Tell travis to run integration test and unit test seperatly-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
+            </plugin>
+            <!--  Tell travis to run integration test and unit test seperatly-->
+
         </plugins>
     </build>
 
